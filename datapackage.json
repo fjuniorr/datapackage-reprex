@@ -1,0 +1,15 @@
+{
+    "name": "reprex",
+    "resources": [
+        {
+            "profile": "tabular-data-resource",
+            "name": "indicadores_planejamento",
+            "path": "indicadores_planejamento.txt",
+            "format": "csv",
+            "encoding": "iso8859-1",
+            "dialect": {
+                "delimiter": "|"
+            }
+        }        
+    ]
+}
