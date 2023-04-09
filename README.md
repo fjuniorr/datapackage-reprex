@@ -39,3 +39,4 @@ _Não faça commits em branches que você não criou antes de expressamente conv
 - [foreign-key-data-package](https://github.com/dados-mg/datapackage-reprex/tree/foreign-key-data-package): Data package com _pattern_ [Foreign Keys to Data Packages](https://specs.frictionlessdata.io/patterns/#table-schema-foreign-keys-to-data-packages) 
 - [frictionless-describe-dataset-template](https://github.com/dados-mg/datapackage-reprex/tree/frictionless-describe-dataset-template)
 - [generate-erd-pictures](https://github.com/dados-mg/datapackage-reprex/tree/generate-erd-pictures)
+- [remote-resources](https://github.com/fjuniorr/datapackage-reprex/tree/remote-resources): Data package com recursos com URL na propriedade `path`
