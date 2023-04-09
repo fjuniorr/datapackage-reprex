@@ -1,0 +1,116 @@
+profile: data-package
+name: sqlite
+title: Data package with resource data stored in sqlite
+resources:
+  - name: date
+    type: table
+    path: sqlite:///database.db
+    scheme: sqlite
+    format: sql
+    dialect:
+      sql:
+        table: date
+    schema:
+      fields:
+        - name: id
+          type: integer
+        - name: date_val
+          type: date
+          constraints:
+            required: true
+        - name: year
+          type: integer
+          constraints:
+            required: true
+        - name: yearmonth
+          type: yearmonth
+          constraints:
+            required: true
+        - name: weekend
+          type: boolean
+          trueValues: ['1']
+          falseValues: ['0']
+          constraints:
+            required: true
+      primaryKey:
+        - id
+  - name: product
+    type: table
+    path: sqlite:///database.db
+    scheme: sqlite
+    format: sql
+    dialect:
+      sql:
+        table: product
+    schema:
+      fields:
+        - name: id
+          type: integer
+        - name: code
+          type: string
+          constraints:
+            required: true
+            pattern: 'SKU\d{3}'
+        - name: name
+          type: string
+          constraints:
+            required: true
+        - name: description
+          type: string
+        - name: category
+          type: string
+          constraints:
+            required: true
+      primaryKey:
+        - id
+  - name: sales
+    type: table
+    path: sqlite:///database.db
+    scheme: sqlite
+    format: sql
+    dialect:
+      sql:
+        table: sales
+    schema:
+      fields:
+        - name: sale_id
+          type: integer
+        - name: date_id
+          type: integer
+          constraints:
+            required: true
+        - name: product_id
+          type: integer
+          constraints:
+            required: true
+        - name: quantity
+          type: integer
+          constraints:
+            required: true
+        - name: unit_price
+          type: number
+          groupChar: '.'
+          decimalChar: ','
+          constraints:
+            required: true
+        - name: total_price
+          type: number
+          groupChar: '.'
+          decimalChar: ','
+          constraints:
+            required: true
+      primaryKey:
+        - sale_id
+      foreignKeys:
+        - fields:
+            - product_id
+          reference:
+            resource: product
+            fields:
+              - id
+        - fields:
+            - date_id
+          reference:
+            resource: date
+            fields:
+              - id
