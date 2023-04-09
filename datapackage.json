@@ -3,9 +3,9 @@
   "resources": [
     {
       "name": "estados",
-      "path": "data/estados.csv",
+      "path": "https://raw.githubusercontent.com/transparencia-mg/datapackage-reprex/foreign-key-constraint/data/estados.csv",
       "profile": "tabular-data-resource",
-      "schema": "schema/estados.json",
+      "schema": "https://raw.githubusercontent.com/transparencia-mg/datapackage-reprex/foreign-key-constraint/schema/estados.json",
       "title": "Estados brasileiros",
       "format": "csv",
       "encoding": "utf-8",
@@ -17,7 +17,8 @@
       "profile": "tabular-data-resource",
       "schema": "schema/pib-per-capita.json",
       "format": "csv",
-      "encoding": "utf-8"
+      "encoding": "utf-8",
+      "dialect": "dialect.json"
     }
   ],
   "keywords": [
