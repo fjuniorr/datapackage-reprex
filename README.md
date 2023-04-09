@@ -40,3 +40,4 @@ _Não faça commits em branches que você não criou antes de expressamente conv
 - [frictionless-describe-dataset-template](https://github.com/dados-mg/datapackage-reprex/tree/frictionless-describe-dataset-template)
 - [generate-erd-pictures](https://github.com/dados-mg/datapackage-reprex/tree/generate-erd-pictures)
 - [remote-resources](https://github.com/fjuniorr/datapackage-reprex/tree/remote-resources): Data package com recursos com URL na propriedade `path`
+- [sqlite backed data packages](20230409T152027/README.md)
